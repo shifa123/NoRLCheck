@@ -33,5 +33,5 @@ for x in x_headers:
          x : target
     }
     
-    res = requests.get('{}://{}'.format(method, target), headers=header, timeout=3, verify=False)
+    res = requests.get('{}://{}'.format(method, target), headers=header, timeout=3, verify=True)
     print('[-] {} | {}\t| response-size: {}'.format(res.status_code, x, len(res.text)))
